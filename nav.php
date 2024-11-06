@@ -18,120 +18,23 @@ if (isset($_SESSION['REST-admin'])) {
       <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
       <!-- <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li> -->
     </ul>
-    <!--
-    <div class="search-element">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-      <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-      <div class="search-backdrop"></div>
-      <div class="search-result">
-        <div class="search-header">
-          Histories
-        </div>
-        <div class="search-item">
-          <a href="#">How to hack NASA using CSS</a>
-          <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-        </div>
-        <div class="search-item">
-          <a href="#">Kodinger.com</a>
-          <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-        </div>
-        <div class="search-item">
-          <a href="#">#Stisla</a>
-          <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-        </div>
-        <div class="search-header">
-          Result
-        </div>
-        <div class="search-item">
-          <a href="#">
-            <img class="mr-3 rounded" width="30" src="assets/img/products/product-3-50.png" alt="product">
-            oPhone S9 Limited Edition
-          </a>
-        </div>
-        <div class="search-item">
-          <a href="#">
-            <img class="mr-3 rounded" width="30" src="assets/img/products/product-2-50.png" alt="product">
-            Drone X2 New Gen-7
-          </a>
-        </div>
-        <div class="search-item">
-          <a href="#">
-            <img class="mr-3 rounded" width="30" src="assets/img/products/product-1-50.png" alt="product">
-            Headphone Blitz
-          </a>
-        </div>
-        <div class="search-header">
-          Projects
-        </div>
-        <div class="search-item">
-          <a href="#">
-            <div class="search-icon bg-danger text-white mr-3">
-              <i class="fas fa-code"></i>
-            </div>
-            Stisla Admin Template
-          </a>
-        </div>
-        <div class="search-item">
-          <a href="#">
-            <div class="search-icon bg-primary text-white mr-3">
-              <i class="fas fa-laptop"></i>
-            </div>
-            Create a new Homepage Design
-          </a>
-        </div>
-      </div>
-    </div>
-    -->
+    
   </form>
   <ul class="navbar-nav navbar-right">
-    <!--<li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-      <div class="dropdown-menu dropdown-list dropdown-menu-right">
-        <div class="dropdown-header">Mensagens
-          <div class="float-right">
-            <a href="#">Marcar todas como lidas</a>
-          </div>
-        </div>
-        <div class="dropdown-list-content dropdown-list-message">
-         
-        </div>
-      </div>
-    </li>
-    -->
-    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg" id="beep"><i class="far fa-bell"></i></a>
-      <div class="dropdown-menu dropdown-list dropdown-menu-right">
-        <div class="dropdown-header">Pedidos
-        </div>
-        <div class="dropdown-list-content dropdown-list-icons">
-          <style>
-            .pedido-alert{width:100%;display:block;border:1px solid red;padding:10px;border-radius:5px;margin-bottom:10px;}
-            .pedido-alert h2{float:right;color:red;}
-            .pedido-alert h1{font-weight:lighter;margin:0}
-
-            .res-pedidos a{text-decoration: none;}
-          </style>
-          <div class="res-pedidos" style="padding:10px">
-          </div>
-        </div>
-
-      </div>
-    </li>
-    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-        <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+     <form class="form-inline mr-auto">
+       
+    <div class="search-element" >
+      <button class="btn" type="reset" style="border-radius: 20px 0 0 20px;min-height: 30px;height: 30px;padding:0 10px;background: #F5F7FA;"><i class="fas fa-search" style="opacity: .4;"></i></button>
+      <input class="form-control" type="search" placeholder="Pesquisar cliente" aria-label="Search" data-width="250" style="border-radius: 0 20px 20px 0;margin-left: -10px;min-height: 30px;height: 30px;background: #F5F7FA;">
+      
+    </div>
+    
+  </form>
+    <li ><a href="#"  class="nav-link nav-link-lg nav-link-user">
+        <button class="btn rounded-circle mr-1" type="reset" style="width: 30px;height: 30px;padding: 0px;background: #F5F7FA;"><i class="fas fa-cog" style="opacity: .4;margin-top:-1.5px"></i></button>
         <div class="d-sm-none d-lg-inline-block nome-header"></div>
       </a>
-      <div class="dropdown-menu dropdown-menu-right">
-        <!-- <div class="dropdown-title">Logged in 5 min ago</div>-->
-        <a href="perfil.php" class="dropdown-item has-icon">
-          <i class="far fa-user"></i> Perfil
-        </a>
-        <a href="definicoes.php" class="dropdown-item has-icon">
-          <i class="fas fa-cog"></i> Definições
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="sair.php" class="dropdown-item has-icon text-danger">
-          <i class="fas fa-sign-out-alt"></i> Sair
-        </a>
-      </div>
+     
     </li>
   </ul>
 </nav>
@@ -139,18 +42,18 @@ if (isset($_SESSION['REST-admin'])) {
 <div class="main-sidebar sidebar-style-2">
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="index.html">REST</a>
+      <a href="index.php">FETA FÁCIL</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="index.html">Rs</a>
+      <a href="index.html"></a>
     </div>
     <ul class="sidebar-menu">
-      <li class="menu-header">The Best</li>
+      <li class="menu-header"></li>
       <li><a class="nav-link" href="index.php"><i class="fas fa-home"></i><span>Inicio</span></a></li>
-      <li><a class="nav-link" href="mesas.php"><i class="fas fa-dice-d6"></i></i><span>Mesas</span></a></li>
-      <li><a class="nav-link" href="produtos.php"><i class="fab fa-product-hunt"></i> <span>Produtos</span></a></li>
-      <li><a class="nav-link" href="reclamacoes.php"><i class="fas fa-file-invoice"></i><span>Reclamações</span></a></li>
-      <li><a class="nav-link" href="notificar.php"><i class="fas fa-bell"></i><span>Notificar</span></a></li>
+      <li><a class="nav-link" href="levantamento.php"><i class="fas fa-file-invoice-dollar"></i><span>Levantamento</span></a></li>
+      <li><a class="nav-link" href="deposito.php"><i class="fas fa-hand-holding-usd"></i> <span>Deposito</span></a></li>
+      <li><a class="nav-link" href="ativos.php"><i class="fas fa-chart-line"></i><span>Ativos</span></a></li>
+      <li><a class="nav-link" href="agentes.php"><i class="fas fa-user"></i><span>Agentes</span></a></li>
     </ul>
 
   </aside>

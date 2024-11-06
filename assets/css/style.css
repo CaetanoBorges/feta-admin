@@ -60,7 +60,7 @@
 .form-control:focus {
   box-shadow: none !important;
   outline: none; }
-
+body{background: #F5F7FA;}
 a {
   color: #6777ef;
   font-weight: 500;
@@ -1517,9 +1517,9 @@ h6 .badge {
   top: 0;
   left: 0;
   width: 100%;
-  height: 115px;
-  background-color: #6777ef;
-  z-index: -1; }
+    height: 75px;
+    z-index: -1;
+    background: white; }
 
 .navbar {
   align-items: center; }
@@ -1952,7 +1952,7 @@ a.dropdown-item {
   --dark: color(dark); }
 
 body {
-  background-color: #fafdfb;
+  background-color: #F5F7FA;
   font-size: 14px;
   font-weight: 400;
   font-family: 'Nunito', 'Segoe UI', arial;
