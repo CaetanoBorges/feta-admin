@@ -16,14 +16,16 @@ if (isset($_SESSION['REST-admin'])) {
   <form class="form-inline mr-auto">
     <ul class="navbar-nav mr-3">
       <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-      <!-- <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li> -->
+       <li><h1 class="page__titulo">
+
+       </h1></li> 
     </ul>
     
   </form>
   <ul class="navbar-nav navbar-right">
      <form class="form-inline mr-auto">
        
-    <div class="search-element" >
+    <div class="search-element" style="display:none;">
       <button class="btn" type="reset" style="border-radius: 20px 0 0 20px;min-height: 30px;height: 30px;padding:0 10px;background: #F5F7FA;"><i class="fas fa-search" style="opacity: .4;"></i></button>
       <input class="form-control" type="search" placeholder="Pesquisar cliente" aria-label="Search" data-width="250" style="border-radius: 0 20px 20px 0;margin-left: -10px;min-height: 30px;height: 30px;background: #F5F7FA;">
       
