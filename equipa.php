@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['REST-admin'])) {
+if (!true) {
     header("Location: index.php");
 }
 ?>
@@ -13,8 +13,6 @@ include("backEnd/FERRAMENTAS/Funcoes.php");
 $funcoes = new Funcoes;
 $db = new dbWrapper($funcoes::conexao());
 
-$arrayRes = [];
-$mesas = $db->select()->from("mesa")->pegaResultados();
 
 
 ?>
