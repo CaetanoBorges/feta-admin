@@ -4,13 +4,10 @@
 session_start();
 if (/* isset($_SESSION['REST-admin']) */ true) {
 
-    error_reporting(0);
-    include("backEnd/FERRAMENTAS/AX.php");
-    include("backEnd/FERRAMENTAS/dbWrapper.php");
-    include("backEnd/FERRAMENTAS/Funcoes.php");
-
-    $funcoes = new Funcoes;
-    $db = new dbWrapper($funcoes::conexao());
+    #error_reporting(0);
+    include("_controladores/init.php");
+    include("_controladores/inicio.php");
+    #var_dump($conexao);
 
 ?>
 <!DOCTYPE html>
@@ -79,15 +76,15 @@ if (/* isset($_SESSION['REST-admin']) */ true) {
                                             <div class="info-display">
                                                 <div class="info-item"> <span class="info-icon">&#9432;</span>
                                                     <span>Todas:</span> <span
-                                                        style="float:right;margin-top: 12px;">500.000</span>
+                                                        style="float:right;margin-top: 12px;"><?php echo $qtdClientes; ?></span>
                                                 </div>
                                                 <div class="info-item"> <span class="info-icon">&#9432;</span>
                                                     <span>Particulares:</span> <span
-                                                        style="float:right;margin-top: 12px;">500.000</span>
+                                                        style="float:right;margin-top: 12px;"><?php echo $qtdNormais; ?></span>
                                                 </div>
                                                 <div class="info-item"> <span class="info-icon">&#9432;</span>
                                                     <span>Empresa:</span> <span
-                                                        style="float:right;margin-top: 12px;">500.000</span>
+                                                        style="float:right;margin-top: 12px;"><?php echo $qtdEmpresas; ?></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -159,44 +156,34 @@ if (/* isset($_SESSION['REST-admin']) */ true) {
                                                 <div id="carouselExampleIndicators" class="carousel slide"
                                                     data-ride="carousel">
                                                     <ol class="carousel-indicators">
-                                                        <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                                            class="active"></li>
-                                                        <li data-target="#carouselExampleIndicators" data-slide-to="1">
-                                                        </li>
-                                                        <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                                                        </li>
+                                                        <?php 
+                                                            foreach ($qtdAgentes as $key => $value) {
+                                                                if ($key == 0) {
+                                                                    echo '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>';
+                                                                } else {
+                                                                    echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$key.'"></li>';
+                                                                }
+                                                            }
+                                                        ?>
                                                     </ol>
                                                     <div class="carousel-inner">
-                                                        <div class="carousel-item active">
-                                                            <div
-                                                                class="d-flex justify-content-center align-items-center">
-                                                                <div class="icon-box text-center"> <i
-                                                                        class="fa fa-home fa-5x" aria-hidden="true"></i>
-                                                                    <h5>Item 1</h5>
-                                                                    <p>Detalhes do Item 1</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <div
-                                                                class="d-flex justify-content-center align-items-center">
-                                                                <div class="icon-box text-center"> <i
-                                                                        class="fa fa-car fa-5x" aria-hidden="true"></i>
-                                                                    <h5>Item 2</h5>
-                                                                    <p>Detalhes do Item 2</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <div
-                                                                class="d-flex justify-content-center align-items-center">
-                                                                <div class="icon-box text-center"> <i
-                                                                        class="fa fa-tree fa-5x" aria-hidden="true"></i>
-                                                                    <h5>Item 3</h5>
-                                                                    <p>Detalhes do Item 3</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        <?php 
+                                                            foreach ($qtdAgentes as $key => $value) {
+                                                                if ($key == 0) {
+                                                                    echo '<div class="carousel-item active">';
+                                                                } else {
+                                                                    echo '<div class="carousel-item">';
+                                                                }
+                                                                echo '<div class="d-flex justify-content-center align-items-center">';
+                                                                echo '<div class="icon-box text-center"> <img src="http://127.0.0.1/fetaapi/BILHETES/'.$value['foto_bi'].'" class="rounded-circle" style="width: 100px; height: 100px;">';
+                                                                echo '<h5>'.$value['nome'].'</h5>';
+                                                                echo '<p>'.$value['provincia'].'</p>';
+                                                                echo '</div>';
+                                                                echo '</div>';
+                                                                echo '</div>';
+                                                            }
+                                                        ?>
+                                                    
                                                     </div> <a class="carousel-control-prev"
                                                         href="#carouselExampleIndicators" role="button"
                                                         data-slide="prev"> <span class="carousel-control-prev-icon"
@@ -324,6 +311,10 @@ if (/* isset($_SESSION['REST-admin']) */ true) {
                     label: 'Levantamento',
                     data: [450, 300, 200, 450, 100, 350, 400],
                     backgroundColor: 'red'
+                }, {
+                    label: 'Pagamento',
+                    data: [50, 300, 200, 40, 100, 50, 40],
+                    backgroundColor: 'blue'
                 }]
             },
             options: {

@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION['REST-admin'])) {
+if (isset($_SESSION['FETA-admin'])) {
 
     $metadata = $_SESSION['metadata'];
 
@@ -52,10 +52,9 @@ if (isset($_SESSION['REST-admin'])) {
     <ul class="sidebar-menu">
       <li class="menu-header"></li>
       <li><a class="nav-link" href="index.php"><i class="fas fa-home"></i><span>Inicio</span></a></li>
-      <li><a class="nav-link" href="levantamento.php"><i class="fas fa-file-invoice-dollar"></i><span>Levantamento</span></a></li>
-      <li><a class="nav-link" href="deposito.php"><i class="fas fa-hand-holding-usd"></i> <span>Deposito</span></a></li>
       <li><a class="nav-link" href="ativos.php"><i class="fas fa-chart-line"></i><span>Ativos</span></a></li>
       <li><a class="nav-link" href="agentes.php"><i class="fas fa-user"></i><span>Agentes</span></a></li>
+      <li><a class="nav-link" href="clientes.php"><i class="fas fa-file-invoice-dollar"></i><span>Clientes</span></a></li>
     </ul>
 
   </aside>
